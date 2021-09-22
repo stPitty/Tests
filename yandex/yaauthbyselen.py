@@ -3,8 +3,8 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 
-def yandex_auth(login_id, passw):
-    driver = webdriver.Chrome('/Users/rup/Downloads/py-homeworks-advanced-master/chromedriver')
+def yandex_auth(login_id, passw, browser_driver_path):
+    driver = webdriver.Chrome(browser_driver_path)
     driver.get('https://passport.yandex.ru/auth')
     login = driver.find_element_by_name('login')
     login.send_keys(login_id)
